@@ -1,0 +1,19 @@
+input {
+    margin-right: 10px;
+}
+
+.tasks-list {
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.tasks-list li {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid black;
+}
+

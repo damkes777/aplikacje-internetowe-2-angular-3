@@ -1,0 +1,23 @@
+<div>
+    <app-navigation/>
+    <div>
+        <label for="task">New task</label>
+        <input [(ngModel)]="taskValue" name="task" id="task" type="text">
+
+        <label for="deadline">Deadline</label>
+        <input [(ngModel)]="taskDate" type="date" name="deadline" id="deadline">
+
+        <button (click)="create()" type="button">Create</button>
+    </div>
+    <div>
+        <ul class="tasks-list">
+            <li *ngFor="let task of tasks">
+                <span>{{ task.title }} {{ task.deadline }}</span>
+                <input type="checkbox" name="complete" id="complete" [(ngModel)]="task.completed" (change)="changeCompleted(task.id)">
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button (click)="archiveCompleted()" type="button">Archive completed</button>
+    </div>
+</div>

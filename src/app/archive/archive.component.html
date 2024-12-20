@@ -1,0 +1,11 @@
+<div>
+    <app-navigation/>
+    <div>
+        <ul class="tasks-list">
+            <li *ngFor="let task of tasks">
+                <span>{{ task.title }} {{ task.deadline }}</span>
+                <button (click)="delete(task)">delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
